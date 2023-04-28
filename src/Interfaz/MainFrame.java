@@ -1,9 +1,13 @@
+/*
+* Jaime Gómez Garrido
+* */
 package Interfaz;
 
 import Paq.Contenedores;
 import Paq.Puerto;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -31,6 +35,8 @@ public class MainFrame extends JFrame{
     private JPanel mainPanel;
     private JTextField textFieldCuantos;
     private JPanel Logo;
+    private JButton pesoTotal;
+    private JPanel pesoTotalPanel;
 
     public MainFrame() {
         setTitle("GESTOR DE CONTENEDORES");
@@ -169,6 +175,12 @@ public class MainFrame extends JFrame{
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 textFieldCuantos.setText(String.valueOf(p1.numPais((String)comboBoxCuantos.getSelectedItem())));
+            }
+        });
+        pesoTotal.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(pesoTotalPanel,p1.pesoTotal());
             }
         });
     }

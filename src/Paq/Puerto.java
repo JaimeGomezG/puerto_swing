@@ -1,3 +1,6 @@
+/*
+ * Jaime Gómez Garrido
+ * */
 package Paq;
 public class Puerto extends Contenedores{
     private final int nFilas=10;
@@ -143,5 +146,16 @@ public class Puerto extends Contenedores{
                 }
             }
         }return false;
+    }
+    public int pesoTotal(){
+        int pesoTotal=0;
+        for (int i = 0; i < nFilas; i++) {
+            for (int j = 0; j < nColumnas; j++) {
+                if (matriz[i][j]!=null){
+                    pesoTotal=pesoTotal+matriz[i][j].getPeso();
+                }
+            }
+        }
+        return pesoTotal;
     }
 }

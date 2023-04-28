@@ -1,13 +1,9 @@
-import Interfaz.MainFrame;
-
 /*
+ * Jaime Gómez Garrido
+ * */
 import Interfaz.MainFrame;
 
-public class Main {
-    public static void main(String[] args) {
-        MainFrame GUI = new MainFrame();
-    }
-}*/
+
 public class Main {
 
     public static void main(String[] args) {
